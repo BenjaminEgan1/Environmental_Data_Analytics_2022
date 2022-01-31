@@ -1,6 +1,6 @@
 ---
 title: "Assignment 1: Introduction"
-author: "Student Name"
+author: "Ben Egan"
 output: pdf_document
 geometry: margin=2.54cm
 ---
@@ -22,21 +22,22 @@ The completed exercise is due on <>.
 
 1. What are your previous experiences with data analytics, R, and Git? Include both formal and informal training.
 
-> Answer: 
+> Answer: I completeed 95% of the statistics coursera course over the summer. I then learned that I could take statistics at Fuqua and did not need to take it at nicholas. 
 
 2. Are there any components of the course about which you feel confident?
 
-> Answer: 
+> Answer: I'm excited about the final project. I have been working with a non profit with a pretty sizeable data set on river data and I'd love to further analyze it
 
 3. Are there any components of the course about which you feel apprehensive?
 
-> Answer: 
+> Answer: Just coding language in general. Although I have taken courses before it has never been a topic I have found to come naturally
 
 
 ## 2) GitHub
 
 Provide a link below to your forked course repository in GitHub. Make sure you have pulled all recent changes from the course repository  and that you have updated your course README file. 
 
-> Answer: 
+> Answer: https://github.com/BenjaminEgan1/Environmental_Data_Analytics_2022.git
+
 
 
