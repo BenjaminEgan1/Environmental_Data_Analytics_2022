@@ -202,7 +202,6 @@ In some cases when dates are provided as integers, you may need to provide an or
 ```{r formatDate}
 help(as.Date)
 
-
 USGS.flow.data$datetime <- as.Date(USGS.flow.data$datetime, format = "%m/%d/%y") 
 ```
 

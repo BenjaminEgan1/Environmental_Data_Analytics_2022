@@ -22,12 +22,19 @@ Opening discussion: why might we be interested in long-term observations of temp
 > Add notes here: 
 
 ```{r, message = FALSE}
+setwd("C:/Users/benja/OneDrive/Documents/R/win-library/Environmental_Data_Analytics_2022")
+
 getwd()
+
+
 #install.packages(tidyverse)
 library(tidyverse)
 #install.packages(lubridate)
 library(lubridate)
-NTL.phys.data <- read.csv("./Data/Raw/NTL-LTER_Lake_ChemistryPhysics_Raw.csv", stringsAsFactors = TRUE)
+EPAair.03.NC2018 <- read.csv("./Data/Raw/EPAair_O3_NC2018_raw.csv", stringsAsFactors = TRUE)
+EPAair.03.NC2019 <- read.csv("./Data/Raw/EPAair_O3_NC2019_raw.csv", stringsAsFactors = TRUE)
+EPAair.PM25.NC2018 <- read.csv("./Data/Raw/EPAair_PM25_NC2018_raw.csv", stringsAsFactors = TRUE)
+EPAair.PM25.NC2019 <- read.csv("./Data/Raw/EPAair_PM25_NC2019_raw.csv", stringsAsFactors = TRUE)
 
 colnames(NTL.phys.data)
 head(NTL.phys.data)
@@ -100,6 +107,8 @@ NTL.phys.data.PeterPaul2 <- filter(NTL.phys.data, lakename != "Central Long Lake
                                      lakename != "Ward Lake" & lakename != "West Long Lake")
 NTL.phys.data.PeterPaul3 <- filter(NTL.phys.data, lakename %in% c("Paul Lake", "Peter Lake"))
 
+view(NTL.phys.data.PeterPaul3)
+
 # Choose a range of conditions of a numeric or integer variable
 summary(NTL.phys.data$daynum)
 NTL.phys.data.JunethruOctober1 <- filter(NTL.phys.data, daynum > 151 & daynum < 305)
@@ -110,7 +119,11 @@ NTL.phys.data.JunethruOctober4 <- filter(NTL.phys.data, daynum %in% c(152:304))
 # Exercise: 
 # filter NTL.phys.data for the year 1999
 # what code do you need to use, based on the class of the variable?
+
 class(NTL.phys.data$year4)
+
+NTL.phys.data$year4 <- as.Date(NTL.phys.data$year4, format = "%Y")
+NTL.phys.data.year <- filter(NTL.phys.data, year(1990))
 
 # Exercise: 
 # filter NTL.phys.data for Tuesday Lake from 1990 through 1999.
