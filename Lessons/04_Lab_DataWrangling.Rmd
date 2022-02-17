@@ -58,10 +58,12 @@ NTL.phys.data.JunethruOctober <- filter(NTL.phys.data, daynum %in% c(152:304))
 # filter NTL.phys.data for the year 1999
 # what code do you need to use, based on the class of the variable?
 
+Exercis1 <- filter(NTL.phys.data,year4==1999)
+
 
 # Exercise 2: 
 # filter NTL.phys.data for Tuesday Lake from 1990 through 1999.
-
+Exercise2 <- filter(NTL.phys.data,year4 %in% (1990:1999) & lakename == "Tuesday Lake")
 
 ```
 Question: Why don't we filter using row numbers?
@@ -83,7 +85,7 @@ NTL.phys.data.processed <-
 
 #Exercise 3: Using a pipe filter NTL.phys.data for Tuesday Lake from 1990 through 1999 only for July 
 
-
+Excercise3 <- NTL.phys.data %>% filter(year4 %in% 1990:1999) %>% filter(lakename == 'Tuesday Lake') %>%
 
 
 

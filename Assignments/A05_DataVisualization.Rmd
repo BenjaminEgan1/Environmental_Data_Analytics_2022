@@ -82,7 +82,8 @@ TotalP.vs.P04 <- ggplot(PeterPaul.Nutrients.Chem,
   geom_point() + mytheme + xlim(0,75) + 
   geom_smooth(method = lm, se = FALSE, color = 'black') + 
   mytheme
-#the method=lm creates the straight best fit line and the SE=False removes the standard error from the plot.
+#the method=lm creates the straight best fit line and the SE=False removes the
+#standard error from the plot.
 
 print(TotalP.vs.P04)
 
@@ -119,7 +120,9 @@ legend <- get_legend(Tempplot1 +
                        guides(color = guide_legend(nrow = 1)) +
                        mytheme)
 
-Combined.plot <- plot_grid(legend,Tempplot1,TPplot1,TNplot1, nrow = 4, ncol = 1, align = 'v', axis = 'l', rel_heights = c(0.5,1,1,1))
+Combined.plot <- plot_grid(legend,Tempplot1,TPplot1,TNplot1,
+                           nrow = 4, ncol = 1, align = 'v', 
+                           axis = 'l', rel_heights = c(0.5,1,1,1))
 
 print(Combined.plot)
 
