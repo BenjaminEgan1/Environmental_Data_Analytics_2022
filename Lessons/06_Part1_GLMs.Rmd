@@ -197,6 +197,7 @@ TPAIC <- lm(data = Paul.naomit, tp_ug ~ depth + dissolvedOxygen +
 
 #Choose a model by AIC in a Stepwise Algorithm
 step(TPAIC)
+
 TPmodel <- lm(data = Paul.naomit, tp_ug ~ dissolvedOxygen + temperature_C + tn_ug)
 summary(TPmodel)
 
